@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+	<bean id="loginService" class="org.darkness.struts2.service.LoginService" />
+	
+	<bean id="loginAction" class="org.darkness.struts2.action.LoginAction" scope="prototype">
+		<property name="loginService" ref="loginService" />
+	</bean>
+</beans>
